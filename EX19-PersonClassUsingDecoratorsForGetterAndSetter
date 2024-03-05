@@ -1,0 +1,25 @@
+class Person:
+    """A class to represent a person."""
+
+    def __init__(self) -> None:
+        """Initialize a new Person with no name."""
+        self._name = None
+        self.__original_name = None
+
+    @property
+    def name(self) -> str:
+        """Return the current name of the person."""
+        return self._name
+
+    @name.setter
+    def name(self, new_name: str) -> None:
+        """Set the name of the person, and keep track of the original name."""
+        if not isinstance(new_name, str):
+            raise ValueError("Name must be a string.")
+        self.__original_name = self._name
+        self._name = new_name
+        print(f"Name has been changed from '{self.__original_name}' to '{new_name}'.")
+
+    def get_original_name(self) -> str:
+        """Return the original name of the person, or the current name if no original name exists."""
+        return self.__original_name if self.__original_name is not None else self._name
