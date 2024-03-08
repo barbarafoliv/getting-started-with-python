@@ -1,27 +1,26 @@
-# getting-started-with-python
-This repository contains my journey through the Advanced Programming with Python course. I’ll document my progress, share code snippets, and explore Python’s powerful features. Let’s dive into the world of Python excellence! 🚀
+# Getting Started with Python
 
-# Classes and Objects
+Welcome to my repository! This is where I document my journey through the Advanced Programming with Python course. I’ll be sharing my progress, code snippets, and the exploration of Python’s powerful features. Let's dive into the world of Python excellence! 🚀
 
-Objects contain instance variables and methods that define their functionalities, which can only be invoked when associated ("self" - the first parameter is the current object).
-Classes contain static variables and static methods, invoked by the class itself.
+## Classes and Objects
 
-## Visibility of variables:
+In Python, objects contain instance variables and methods that define their functionalities. These can only be invoked when associated with the object itself (referred to as "self"). On the other hand, classes contain static variables and static methods, which are invoked by the class itself.
 
-double underscore __: PRIVATE - highly encapsulated, not visible to other classes or modules - ex: self.__name
-a single underscore _: PROTECTED - attribute should not be accessed outside the class (although it can happen) - ex: self._name
-no underscore: PUBLIC - attribute can be accessed from anywhere in code - ex: self.name
+### Visibility of Variables
 
-Note: Although it's possible to hide variables, their manipulation by others is always possible.
+- **Private** (`__`): These are highly encapsulated variables that are not visible to other classes or modules. For example, `self.__name`.
+- **Protected** (`_`): These attributes should not be accessed outside the class, although it can happen. For example, `self._name`.
+- **Public**: These attributes can be accessed from anywhere in the code. For example, `self.name`.
 
-## Access to variables:
+> Note: Although it's possible to hide variables, their manipulation by others is always possible.
 
-reading - GETTER @property - ex: when we write 'person.name', we are calling the method name() defined by the decorator @property
-assignment - SETTER (can include data validation) @Attribute.setter
+### Access to Variables
 
-Note: By using Getters and Setters we are following an important programming principle - Encapsulation. This allows the class to control how the attributes are accessed and modified. 
+- **Getter** (`@property`): This is used for reading the variable. For example, when we write 'person.name', we are calling the method `name()` defined by the decorator `@property`.
+- **Setter** (`@Attribute.setter`): This is used for assigning values to the variable. It can include data validation.
 
-## Inheritance:
-Hierarchy: superclass <- class <- subclass
+> Note: By using Getters and Setters we are following an important programming principle - Encapsulation. This allows the class to control how the attributes are accessed and modified.
 
-Note: Python allows multiple inheritance - a class can derive from more than one superclass.
+## Inheritance
+
+Inheritance in Python follows a hierarchy: `superclass <- class <- subclass`. Python also allows multiple inheritance, which means a class can derive from more than one superclass.
