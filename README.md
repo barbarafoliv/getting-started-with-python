@@ -24,3 +24,30 @@ In Python, objects contain instance variables and methods that define their func
 ## Inheritance
 
 Inheritance in Python follows a hierarchy: `superclass <- class <- subclass`. Python also allows multiple inheritance, which means a class can derive from more than one superclass.
+
+## Metaprogramming in Python
+
+### Metaclasses
+
+Metaclasses are classes that create other classes. They allow you to customize how classes are created, adding specific behaviors or validating the structure of the class before its creation. To define a metaclass, you create a class that inherits from `type` and define a special method: `__new__` or `__init__`.
+
+### Type
+
+Example:
+```python
+LanguageType = type('LanguageType', (object, ), {
+    '__init__': init,
+    'getLanguage': getLanguage,
+})
+
+In the type method, there are three arguments:
+
+- The string 'LanguageType' is the name of the class.
+- The tuple (object, ) indicates that this class inherits from the object class. The comma at the end helps the Python interpreter recognize it as a tuple.
+- The dictionary specifies the attributes and methods of the class. In this case, it contains two methods: init and getLanguage.
+
+Metaclasses implement the __new__ method, which takes four arguments:
+1. The metaclass itself.
+2. The name of the class.
+3. The superclasses, in the form of a tuple.
+4. The attributes of the class, in the form of a dictionary.
