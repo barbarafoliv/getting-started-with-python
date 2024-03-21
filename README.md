@@ -39,6 +39,7 @@ LanguageType = type('LanguageType', (object, ), {
     '__init__': init,
     'getLanguage': getLanguage,
 })
+```
 
 In the type method, there are three arguments:
 
