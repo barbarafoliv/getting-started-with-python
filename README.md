@@ -52,3 +52,33 @@ Metaclasses implement the __new__ method, which takes four arguments:
 2. The name of the class.
 3. The superclasses, in the form of a tuple.
 4. The attributes of the class, in the form of a dictionary.
+
+> Note: Metaclasses in Python are classes that define the behavior of other classes. Python doesn't allow multiple inheritance from metaclasses, just from one. 
+
+## Django
+
+Django is a Python framework that makes it easier to create web sites using Python. 
+Django is especially helpful for database driven websites.
+
+### MVT Design Pattern
+
+Django follows the MVT design pattern (Model View Template).
+
+- Model - The data you want to present, usually data from a database.
+- View - A request handler that returns the relevant template and content - based on the request from the user.
+- Template - A text file (like an HTML file) containing the layout of the web page, with logic on how to display the data.
+
+### Virtual Environment
+
+It is suggested to have a dedicated virtual environment for each Django project, and one way to manage a virtual environment is venv, which is included in Python.
+
+## Django Views
+
+Django views are Python functions that takes http requests and returns http response, like HTML documents.
+A web page that uses Django is full of views with different tasks and missions.
+
+> Note: The name of the view does not have to be the same as the application.
+
+## SQLite Database
+
+When we created the Django project, we got an empty SQLite database. By default, all Models created in the Django project will be created as tables in this database.
