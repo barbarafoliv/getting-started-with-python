@@ -55,6 +55,16 @@ Metaclasses implement the __new__ method, which takes four arguments:
 
 > Note: Metaclasses in Python are classes that define the behavior of other classes. Python doesn't allow multiple inheritance from metaclasses, just from one. 
 
+## Iterators and Coroutines
+
+Iterators are methods that allow iterating collections of data such as lists, tuples, etc. It allows traversing an object and returning its elements. The Python iterator object must implement the `__iter__()` and `__next__()` methods - Iterator Protocol.
+
+### Properties of iterators
+
+- The iteration object remembers the iteration count through the internal count variable.
+- Once the iteration is complete, it raises a `StopIteration` exception, and the iteration count cannot be reset to 0.
+- Therefore, it can be used to traverse the content only once.
+
 ## Django
 
 Django is a Python framework that makes it easier to create web sites using Python. 
@@ -72,13 +82,13 @@ Django follows the MVT design pattern (Model View Template).
 
 It is suggested to have a dedicated virtual environment for each Django project, and one way to manage a virtual environment is venv, which is included in Python.
 
-## Django Views
+### Django Views
 
 Django views are Python functions that takes http requests and returns http response, like HTML documents.
 A web page that uses Django is full of views with different tasks and missions.
 
 > Note: The name of the view does not have to be the same as the application.
 
-## SQLite Database
+### SQLite Database
 
 When we created the Django project, we got an empty SQLite database. By default, all Models created in the Django project will be created as tables in this database.
