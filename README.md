@@ -92,3 +92,8 @@ A web page that uses Django is full of views with different tasks and missions.
 ### SQLite Database
 
 When we created the Django project, we got an empty SQLite database. By default, all Models created in the Django project will be created as tables in this database.
+
+### Django QuerySet
+
+A QuerySet is a collection of data from a database that is built up as a list of objects.
+QuerySets makes it easier to get the data you actually need, by allowing you to filter and order the data at an early stage.
